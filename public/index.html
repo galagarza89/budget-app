@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Budget Buddy</title>
+    <meta charset="utf-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0">   -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="./css/styles.css">
+</head>
+<body>
+
+
+<div class="container-fluid">
+    <h1 class="text-center">Budget Calculator</h1>
+
+    <div class="budgetCalcDiv">
+
+        <div class="row budgetCalcInput">
+            <div class="col-sm-7">
+                <p class="text-center">Please enter your net annual or monthly income:</p>
+            </div>
+            <div class="col-sm-5 text-center">
+                <input type="text" id="incomeInput" name="incomeInput" placeholder="Income Amount">
+            </div>
+        </div> 
+        <div class="budgetButtons text-center">
+            <button type="button" id="calculateInput" class="btn btn-secondary btn-md">Calculate!</button>
+            <button type="button" id="resetAll" class="btn btn-secondary btn-md">Reset</button>
+        </div>
+        
+
+        <div class="table-responsive">
+            <table class="table budgetTable">
+              <thead>
+                <tr>
+                  <th scope="col">Expense</th>
+                  <th scope="col">Range</th>
+                  <th scope="col">Low Amount</th>
+                  <th scope="col">High Amount</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">Mortgage/Rent</th>
+                  <td>25-35%</td>
+                  <td class="twentyFivePercent reset">$0</td>
+                  <td class="thirtyFivePercent reset">$0</td>
+                </tr>
+                <tr>
+                  <th scope="row">Utilities</th>
+                  <td>5-10%</td>
+                  <td class="fivePercent reset">$0</td>
+                  <td class="tenPercent reset">$0</td>
+                </tr>
+                <tr>
+                  <th scope="row">Transportation</th>
+                  <td>10-15%</td>
+                  <td class="tenPercent reset">$0</td>
+                  <td class="fifteenPercent reset">$0</td>
+                </tr>
+                <tr>
+                  <th scope="row">Food</th>
+                  <td>10-15%</td>
+                  <td class="tenPercent reset">$0</td>
+                  <td class="fifteenPercent reset">$0</td>
+                </tr>
+                <tr>
+                  <th scope="row">Recreation</th>
+                  <td>5-10%</td>
+                  <td class="fivePercent reset">$0</td>
+                  <td class="tenPercent reset">$0</td>
+                </tr>
+                <tr>
+                  <th scope="row">Debt</th>
+                  <td>5-10%</td>
+                  <td class="fivePercent reset">$0</td>
+                  <td class="tenPercent reset">$0</td>
+                </tr>
+                  <th scope="row">Insurance</th>
+                  <td>10-25%</td>
+                  <td class="tenPercent reset">$0</td>
+                  <td class="twentyFivePercent reset">$0</td>
+                </tr>
+                  <th scope="row">Savings</th>
+                  <td>10-20%</td>
+                  <td class="tenPercent reset">$0</td>
+                  <td class="twentyPercent reset">$0</td>
+                </tr>
+              </tbody>
+            </table>
+        </div> <!-- end of table responsive -->
+    </div> <!-- end of budgetCalcDiv -->
+
+
+    <h4 class="text-center savingHeader">If you took your average savings of <span id="savingsSpan">$0</span> and invested in the following:</h4>
+
+    <div class="row savingsDiv">
+
+        <div class="col-xs-12 col-lg-5 growthTableDiv">
+            <h4 class="text-center">Bank Growth</h4>
+            <br>
+            <div class="table-responsive">
+                <table class="table budgetTable">
+                  <thead>
+                    <tr>
+                      <th scope="col">Investment</th>
+                      <th scope="col">Avg. Growth</th>
+                      <th scope="col">5 year</th>
+                      <th scope="col">10 year</th>
+                      <th scope="col">20 year</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">Savings Account</th>
+                      <td>0.05%</td>
+                      <td class="savingsAcc5 reset">$0</td>
+                      <td class="savingsAcc10 reset">$0</td>
+                      <td class="savingsAcc20 reset">$0</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Money Market</th>
+                      <td>2%</td>
+                      <td class="mmAcc5 reset">$0</td>
+                      <td class="mmAcc10 reset">$0</td>
+                      <td class="mmAcc20 reset">$0</td>
+                    </tr>
+                      <th scope="row">Annuities</th>
+                      <td>4%</td>
+                      <td class="annuityAcc5 reset">$0</td>
+                      <td class="annuityAcc10 reset">$0</td>
+                      <td class="annuityAcc20 reset">$0</td>
+                    </tr>
+                  </tbody>
+                </table>
+            </div> <!-- end of table responsive -->
+        </div> <!-- end of growth div -->
+
+        <div class="col-lg-2"></div>
+
+        <div class="col-xs-12 col-lg-5 investmentTableDiv">
+            <h4 class="text-center">Investment Growth</h4>
+            <br>
+            <div class="table-responsive">
+                <table class="table budgetTable">
+                  <thead>
+                    <tr>
+                      <th scope="col">Investment</th>
+                      <th scope="col">Avg. Growth</th>
+                      <th scope="col">5 year</th>
+                      <th scope="col">10 year</th>
+                      <th scope="col">20 year</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">Mutual Funds</th>
+                      <td>12%</td>
+                      <td class="mfAcc5 reset">$0</td>
+                      <td class="mfAcc10 reset">$0</td>
+                      <td class="mfAcc20 reset">$0</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Diversified Stock</th>
+                      <td>10%</td>
+                      <td class="stockETFAcc5 reset">$0</td>
+                      <td class="stockETFAcc10 reset">$0</td>
+                      <td class="stockETFAcc20 reset">$0</td>
+                    </tr>
+                      <th scope="row">ETFs</th>
+                      <td>10%</td>
+                      <td class="stockETFAcc5 reset">$0</td>
+                      <td class="stockETFAcc10 reset">$0</td>
+                      <td class="stockETFAcc20 reset">$0</td>
+                    </tr>
+                  </tbody>
+                </table>
+                </div> <!-- end of table responsive -->
+        </div> <!-- end of growth div -->
+    </div> <!-- end of savings div -->
+</div> <!-- end of container div -->
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script type="text/javascript" src="./scripts/scripts.js"></script>
+</body>
+</html>
+
+
+

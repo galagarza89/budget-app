@@ -1,0 +1,93 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-color: rgb(239, 238, 222);
+}
+
+.container-fluid {
+	margin: 0 auto;
+	padding: 0;
+	width: 95%;
+}
+
+
+
+/***********************
+Low Yield Safe Table
+***********************/
+
+h3 {
+	margin-top: 25px;
+}
+
+.budgetCalcDiv {
+	margin: 50px auto 0;
+	background-color: rgba(137, 137, 136, 0.7);
+	padding: 10px;
+	border-radius: 10px;
+	width: 90%;
+}
+
+.budgetCalcInput {
+	width: 100%;
+	margin: 20px auto 10px;
+}
+
+.budgetCalcInput p {
+	margin-left: 10px;
+}
+
+.budgetButtons {
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+.savingHeader {
+	margin-top: 50px;
+}
+
+/***********************
+Savings Div
+***********************/
+
+.savingsDiv {
+	margin: 30px auto;
+	width: 90%;
+}
+
+span {
+	font-weight: bold;
+}
+
+/***********************
+Growth Div
+***********************/
+
+.growthTableDiv {
+	background-color: rgba(158, 9, 21, 0.8);
+	border-radius: 10px;
+	padding: 5px;
+}
+
+/***********************
+Investments Div
+***********************/
+
+.investmentTableDiv {
+	background-color: rgba(2, 137, 54, 0.8);
+	border-radius: 10px;
+	padding: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
